@@ -38,9 +38,6 @@ int turnSpeed = 160;
 
 const float timeFact = 5.5; // valid for 1 degree turn and motor Vcc=5.3V and max speedCar
 
-
-
-
 void setup() {
   //Declare all IR sensors as inputs
   Serial.begin(9600);
@@ -59,9 +56,6 @@ void setup() {
   pinMode(IN_R_2, OUTPUT);
 
   initialStartCar(30);
-   
-  
-
 }
 
 
@@ -80,16 +74,6 @@ void loop() {
       calculateError();
       forward(30);
   }
-
-//  while(error==103 && !rCheck){
-//      readIRSensors();
-//      calculateError();
-//      initialStartCar(30);
-//      stop(30);
-//  }
-//  if(!rCheck){
-//    reverse(100);    
-//  }
 
   rCheck = true;
   
